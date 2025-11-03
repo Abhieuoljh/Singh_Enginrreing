@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background: linear-gradient(to right, #e0b6b6, #5c2d2d);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar li {
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffc107;
+    }
+
+    .login-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      margin: 40px auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: teal;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .new-id {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .new-id a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .new-id a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .navbar ul {
+        flex-direction: column;
+      }
+
+      .navbar li {
+        margin: 10px 0;
+      }
+
+      .login-box {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="newid.html"><i class="fas fa-user-plus"></i> Create ID</a></li>
+      <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="login-box">
+    <h2>LOGIN</h2>
+    <form action="login.php" method="POST">
+      <label for="username">USERNAME</label>
+      <input type="text" name="username" id="username" required>
+
+      <label for="password">PASSWORD</label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <div class="new-id">
+      <p>Don't have an account? <a href="create_id.html">Create New ID</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
